@@ -1,0 +1,15 @@
+<form [formGroup]="form" (ngSubmit)="doUpload()">
+    <mat-form-field appearance="outline">
+        <mat-label>Title</mat-label>
+        <input type="text" placeholder="Upload Title" matInput formControlName="title">
+    </mat-form-field>
+
+    <input type="file" placeholder="File upload" formControlName="file" #toUpload multiple>
+
+    <div class="space-around" style="margin-top: 10px;">
+        <button type="button" mat-raised-button color="accent" [routerLink]="['/']">
+            <mat-icon fontIcon="cancel"></mat-icon>Cancel
+        </button>
+        <button type="submit" mat-raised-button color="primary" [disabled]="form.invalid">Upload</button>
+    </div>
+</form>

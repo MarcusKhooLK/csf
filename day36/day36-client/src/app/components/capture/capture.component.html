@@ -1,0 +1,9 @@
+<div class="center-it">
+    <webcam (imageCapture)="imageCaptured($event)" [trigger]="triggerObs" [width]="width"></webcam>
+    <div>
+        <button type="button" (click)="onCaptureBtnClicked()">Capture</button>
+    </div>
+    <div>
+        <img [src]="capturedImage" class="thumbnail">
+    </div>
+</div>

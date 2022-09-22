@@ -1,0 +1,20 @@
+<button type="button" (click)="randomize()">Randomize</button>
+<hr>
+
+<app-list [numList]="numList"></app-list>
+
+<app-todo #todo> <!-- TodoComponent -->
+  <div>
+    <button type="button" style="margin-right: 8px;" (click)="saveTodo()" [disabled]="todoComp?.invalid">Save</button>
+    <button type="button" style="margin-right: 8px;">Update</button>
+    <button type="button" style="margin-right: 8px;">Delete</button>
+  </div>
+</app-todo>
+
+<app-todo> <!-- TodoComponent -->
+  <div>
+    <button type="button" style="margin-right: 8px;" (click)="saveTodo()" [disabled]="todoComp?.invalid">Save</button>
+    <button type="button" style="margin-right: 8px;">Update</button>
+    <button type="button" style="margin-right: 8px;">Delete</button>
+  </div>
+</app-todo>

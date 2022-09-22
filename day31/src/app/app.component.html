@@ -1,0 +1,11 @@
+<app-generate name="fred"></app-generate>
+<app-generate name="mun"></app-generate>
+<app-generate [name]="myName"></app-generate>
+<h1 *ngIf="myName.length > 3">ngIf</h1>
+<h1>ngFor</h1>
+<div *ngFor="let n of names; let i = index">
+  <span>{{ i }}</span>
+  <app-generate [name]="n | uppercase"></app-generate>
+</div>
+<app-registration (onNewRegistration)="newRegistration($event)"></app-registration>
+<app-registration (onNewRegistration)="newRegistration($event)" [registration]="betty"></app-registration>

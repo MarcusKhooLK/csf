@@ -1,0 +1,8 @@
+.thumbnail {
+    height: 200px;
+    width: auto;
+}
+
+.mouseHover{
+    opacity: 0.5;
+}

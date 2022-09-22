@@ -1,0 +1,12 @@
+<div>
+    <form [formGroup]="form" (ngSubmit)="onPost()">
+        <div class="center-it thumbnail">
+            <img [src]="imageUrl">
+        </div>
+        <div>
+            <input type="text" formControlName="title">
+            <button type="button" [routerLink]="['/']">Cancel</button>
+            <button type="submit" [disabled]="form.invalid">Post</button>
+        </div>
+    </form>
+</div>

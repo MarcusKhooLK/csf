@@ -1,0 +1,5 @@
+<div (mouseenter)="enter()" (mouseleave)="exit()">
+    <img [src]="image" alt="" [class]="styleClass">
+    <p [style.font-size]="fontSize">{{ title }}</p>
+    <button type="button" [disabled]="addToCart" (click)="process()">Add to Cart</button>
+</div>

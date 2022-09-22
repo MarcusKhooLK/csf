@@ -1,0 +1,21 @@
+<div>
+<h1>Cart</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>UnitPrice</th>
+            <th>Quantity</th>
+        </tr>
+        <tr *ngFor="let item of _itemsInCart; let i = index;">
+            <td>{{item.name}}</td>
+            <td>{{item.unitPrice | currency}}</td>
+            <td>{{item.quantity}}</td>
+            <td><button type="button" (click)="onRemoveItem(i)">X</button></td>
+        </tr>
+        <tr>
+            <td>Total</td>
+            <td></td>
+            <td>{{total | currency}}</td>
+        </tr>
+    </table>
+</div>

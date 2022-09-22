@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">
+  <mat-icon fontIcon="menu" (click)="toggleSidebar()"></mat-icon>
+  <span>My Toolbar</span>
+</mat-toolbar>
+
+<mat-drawer-container autosize>
+
+  <mat-drawer #myDrawer>
+    <mat-list>
+      <mat-list-item role="listitem" (click)="myDrawer.toggle()" [routerLink]="['/']">Register</mat-list-item>
+      <mat-list-item role="listitem" (click)="myDrawer.toggle()" [routerLink]="['/upload']">Upload</mat-list-item>
+    </mat-list>
+  </mat-drawer>
+
+  <div class="full-height">
+    <router-outlet></router-outlet>
+  </div>
+</mat-drawer-container>

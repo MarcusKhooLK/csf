@@ -1,0 +1,11 @@
+<h2>ACME Ordering</h2>
+
+<table>
+	<tr>
+		<td>
+			<app-purchaseorder [order]="order" (onNewOrder)="processNewOrder($event)"></app-purchaseorder>
+		<td>
+			<app-orders [ordersDB]="ordersDB" (onEdit)="editOrder($event)"></app-orders>
+		</td>
+	</tr>
+</table>

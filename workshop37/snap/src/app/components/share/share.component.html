@@ -1,0 +1,27 @@
+<div class="center-it space-around">
+    <img [src]="imageData" [width]="imageWidth">
+  </div>
+  
+  <div class="center-it">
+    <form [formGroup]="form" (ngSubmit)="shareIt()">
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Title</mat-label>
+        <input type="text" id="title" placeholder="Title" formControlName="title" matInput>
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Caption</mat-label>
+        <textarea id="caption" cols="30" rows="4" formControlName="caption" matInput></textarea>
+      </mat-form-field>
+  
+      <div class="center-it">
+        <button type="button" [routerLink]="['/']" mat-mini-fab color="primary">
+          <mat-icon fontIcon="arrow_back"></mat-icon>
+        </button>
+        <button type="submit" mat-mini-fab color="primary" [disabled]="!canShare">
+          <mat-icon fontIcon="share"></mat-icon>
+        </button>
+      </div>
+    </form>
+  </div>

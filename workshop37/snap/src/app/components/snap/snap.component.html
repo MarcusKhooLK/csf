@@ -1,0 +1,7 @@
+<div class="center-it">
+    <webcam [width]="width" [trigger]="trigger" (imageCapture)="snapshot($event)"></webcam>
+    <mat-divider></mat-divider>
+    <button type="button" (click)="takePicture()" mat-fab color="primary">
+        <mat-icon fontIcon="photo_camera"></mat-icon>
+    </button>
+</div>

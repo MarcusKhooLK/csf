@@ -1,0 +1,10 @@
+<div>
+    <table>
+        <tr>
+            <td><button type="button" (click)="prevClicked()">Prev</button></td>
+            <td><img [src]="numberImage" alt="" class="thumbnail" (click)="onImagedClicked()" [ngClass]="{'mouseHover': isMouseOver}"
+                (mouseenter)="onMouseEnter()" (mouseleave)="onMouseExit()"></td>
+            <td><button type="button" (click)="nextClicked()">Next</button></td>
+        </tr>
+    </table>
+</div>

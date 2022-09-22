@@ -1,0 +1,4 @@
+<h1>{{ image }}({{ count }})</h1>
+<app-display (clicked)="onImageClicked($event)"></app-display>
+<!--clicked function has to be the same as app-display output function name-->
+<app-display image="/assets/cat0.jpg" title="Cat Meow!" (clicked)="onImageClicked($event)"></app-display>

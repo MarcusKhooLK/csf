@@ -1,0 +1,6 @@
+<h2>{{ selectedNumberText }}</h2>
+<app-random-number (onNumberClicked)="onImageClicked($event)" [numberGenerated]="number"></app-random-number>
+<div>
+  <button type="button" (click)="reset()">Reset</button>
+</div>
+<app-greetings></app-greetings>

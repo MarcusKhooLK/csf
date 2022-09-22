@@ -1,0 +1,52 @@
+<div class="row justify-content-md-center mt-3 mb-3">
+    <div class="col-md-auto">
+        <div class="d-inline p-2">
+            <button type="button" class="btn btn-primary" (click)="showForm()">Add</button>
+        </div>
+        <div class="d-inline p-2">
+            <button type="button" class="btn btn-primary" (click)="showContacts()">List</button>
+        </div>
+    </div>
+</div>
+<div class="row justify-content-md-center" *ngIf="toShowContacts">
+    <div class="col-md-auto">
+        <h1>List of Contacts</h1>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let c of contacts; let i = index">
+                    <td>{{c.name}}</td>
+                    <td>{{c.email}}</td>
+                    <td>{{c.mobile}}</td>
+                    <td><button type="submit" class="btn btn-primary" (click)="onRemoveContact(i)">X</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="row justify-content-md-center" *ngIf="!toShowContacts">
+    <div class="col-md-auto">
+        <h1>Add a Contact</h1>
+        <form [formGroup]="form" (ngSubmit)="onAddContact()">
+            <div class="mb-3">
+                <label for="bsFormControlName" class="form-label">Name</label>
+                <input type="text" class="form-control" formControlName="name" id="bsFormControlName">
+            </div>
+            <div class="mb-3">
+                <label for="bsFormControlEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" formControlName="email" id="bsFormControlEmail">
+            </div>
+            <div class="mb-3">
+                <label for="bsFormControlMobile" class="form-label">Mobile</label>
+                <input type="tel" class="form-control" formControlName="mobile" id="bsFormControlMobile">
+            </div>
+            <button type="submit" class="btn btn-primary" [disabled]="form.invalid">Add</button>
+        </form>
+    </div>
+</div>

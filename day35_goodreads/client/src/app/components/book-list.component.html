@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <ul>
+                <li *ngFor="let book of books">
+                    <a [routerLink]="['/book', book.bookId]">{{ book.title }}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <button type="button" class="btn btn-primary" (click)="onPrev()" [disabled]="currOffset === 0">Prev</button>
+        </div>
+        <div class="col">
+            <button type="button" class="btn btn-primary" (click)="onNext()">Next</button>
+        </div>
+    </div>
+</div>
